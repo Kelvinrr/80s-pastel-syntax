@@ -1,0 +1,22 @@
+{
+  "name": "80's Pastel",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "description": "A colorful trubute to the 80's",
+  "keywords": [
+    "syntax",
+    "theme",
+    "80s",
+    "80's",
+    "colorful",
+    "dark",
+    "seti",
+    "pastel",
+
+  ],
+  "repository": "https://github.com/Kelvinrr/80s-pastel-syntax.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
