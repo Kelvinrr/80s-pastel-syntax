@@ -1,43 +1,53 @@
 /* Pallete to test new combinations with
-	rgb(211,249,232)
-    rgb(211,249,249)
-    rgb(108,223,234)
-    rgb(212,215,214)
-    rgb(38,203,224)
-    rgb(128,72,240)
-    rgb(0,209,164)
-	rgb(2,226,131)
-	rgb(55,159,122)
+	rgb(147,223,184)
+	rgb(235,220,200)
+	rgb(238,237,219)
+	rgb(227,170,214)
+	rgb(181,216,235)
+	rgb(238,242,230)
+	rgb(255,237,201)
+	rgb(255,200,186)
+	rgb(37,41,42)
+	rgb(161,219,178)
+	rgb(230,230,220)
+	rgb(218,221,251)
+	rgb(248,218,251)
+	rgb(255,171,171)
+	rgb(15,219,159)
+	rgb(218,251,248)
+	rgb(221,229,254)
 */
 
 /////////////// COLORS ////////////////
 @blue: rgb(85,181,219);
 @green: rgb(55,159,122);
 @yellow: rgb(230,205,105);
-@red: rgb(255,140,148);
+@red: rgb(255,0,0);
 @purple: rgb(122,167,214);
 
 ///// LANGUAGE CATEGORICAL COLORS /////
-@variable-definitions: rgb(85,181,219);
-@variable-call: rgb(108,223,234);
-@variable-function: rgb(165,170,217);
-@language-comments: rgb(0,209,164);
-@language-keywords: rgb(55,159,122);
-@language-enitity: rgb(14,141,148);
+@variable-definitions: rgb(221,254,254);//rgb(255,237,201);
+@variable-call: rgb(255,171,171);
+@variable-function: rgb(227,170,214);
+@language-comments: rgb(171,228,255);
+@language-keywords: rgb(218,221,251);
+@language-enitity: rgb(147,223,184);
 @language-misc: rgb(255,140,148);
 
 /////////////// GUTTER ///////////////
-@gutter-text: rgb(64,75,83);
-@gutter-text-highlight: @entity;
-@gutter-background: rgb(14,17,18);
-@gutter-background-highlight: rgb(6,7,8);
+@gutter-text: rgb(104,115,123);
+@gutter-text-highlight: rgb(255,237,201);
+@gutter-background: lighten(@code-background, 5%);
+@gutter-background-highlight: rgb(181,216,235);
 
 ///////////// CODE VIEW //////////////
-@code-background: rgb(24,26,27); // editor background
+@code-background: rgb(55,59,68); // editor background
 @code-font: Source Code Pro;
-@code-font-color: rgb(212,215,214); // default editor text
+@code-font-color: rgb(255,240,211); // default editor text
+@css-code-font-color: rgb(218,221,251); // special case for css
 
 //////////// SYNTAX COLORS ////////////
+
 // commnets ---------------
 @comment: @language-comments;
 @comment-bg: none;
@@ -55,13 +65,13 @@
 @function-param: @language-misc;
 // ------------------------
 
-@meta: @code-font-color;
+@meta: rgb(181,216,235);
 @error: @red;
 @regex: @string;
 @numeric: @string;
 @quotes: @code-font-color;
-@markup: @code-font-color;
-@unknown: @code-font-color;
+@markup: @variable-call;
+@unknown: @variable-call;
 
 //////////// MISC COLORS ///////////
 @invisible: rgba(255,255,255,0.1);
@@ -82,8 +92,8 @@
 @inline: lighten(@blue, 25%);
 
 @entity-function: @blue;
-@brackets: darken(@code-font-color, 30%);
-@punctuation: darken(@code-font-color, 30%);
+@brackets: rgb(181,216,235);
+@punctuation: rgb(181,216,235);
 
 @search-bg: transparent;
 @search-border: solid 1px @blue;

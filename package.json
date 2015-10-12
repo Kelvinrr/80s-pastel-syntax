@@ -1,5 +1,5 @@
 {
-  "name": "80's Pastel",
+  "name": "80s-pastel-syntax",
   "theme": "syntax",
   "version": "0.0.1",
   "description": "A colorful trubute to the 80's",
@@ -11,7 +11,7 @@
     "colorful",
     "dark",
     "seti",
-    "pastel",
+    "pastel"
 
   ],
   "repository": "https://github.com/Kelvinrr/80s-pastel-syntax.git",
