@@ -9,6 +9,7 @@ header, section, footer, aside, nav, article, figure, figcaption {
 	display: block;
 }
 
+/* This is a sentance about this code */
 body {
 	color: #666666;
 	background-color: #f9f8f6;
