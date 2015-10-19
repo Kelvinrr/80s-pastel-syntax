@@ -6,4 +6,5 @@ A colorful tribute to the 80's :blue_heart:
 ```console
 apm install 80s-pastel-syntax
 ```
-![palette](https://raw.githubusercontent.com/Kelvinrr/seafoam-syntax/master/palette.png)
+![palette](https://raw.githubusercontent.com/Kelvinrr/80s-pastel-syntax/master/80s%20pattern.png)
+![pallete](https://raw.githubusercontent.com/Kelvinrr/80s-pastel-syntax/master/pallette.png)
