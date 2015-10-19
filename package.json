@@ -1,7 +1,7 @@
 {
   "name": "80s-pastel-syntax",
   "theme": "syntax",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A colorful trubute to the 80's",
   "keywords": [
     "syntax",
@@ -12,7 +12,6 @@
     "dark",
     "seti",
     "pastel"
-
   ],
   "repository": "https://github.com/Kelvinrr/80s-pastel-syntax.git",
   "license": "MIT",
