@@ -1,7 +1,6 @@
 # 80s-pastel-syntax
 
-[![npm](https://img.shields.io/npm/dt/express.svg)](https://atom.io/themes/80s-pastel-syntax)
-
+[![apm](https://img.shields.io/apm/dm/spacegray-light-neue-ui.svg?maxAge=2592000&style=flat-square)](https://atom.io/themes/80s-pastel-syntax)
 A colorful tribute to the 80's :blue_heart:
 
 ![palette](https://raw.githubusercontent.com/Kelvinrr/80s-pastel-syntax/master/80s%20pattern.png)
