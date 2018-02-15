@@ -1,100 +1,100 @@
 @import "colors.less";
 
-.comment {
+.syntax--comment {
   color: @comment;
   background: @comment-bg;
 }
 
-.keyword {
+.syntax--keyword {
   // @ of @font-face & @media
   color: @keyword;
 
   // try, catch, if, else, return (js)
-  &.control {
+  &.syntax--control {
     color: @keyword;
   }
 
   // =, +, -, ?, :, !=. &&, in (js)
-  &.operator {
+  &.syntax--operator {
     color: @keyword;
   }
 
   // can't tell what this does :/
-  &.other.special-method {
+  &.syntax--other.syntax--special-method {
     color: @keyword;
   }
 
   // can't tell what this does :/
-  &.other.unit {
+  &.syntax--other.syntax--unit {
     color: @keyword;
   }
 }
 
 
 // STORAGE |
-.storage {
+.syntax--storage {
   color: @storage;
 
   // var of var a = b;
-  &.modifier {
+  &.syntax--modifier {
     color: @storage;
   }
 
 }
 
 
-.constant {
+.syntax--constant {
 
   // true, false, null, undefined
   color: @constant;
 
   // \ of ("what\'s")
-  &.character.escape {
+  &.syntax--character.syntax--escape {
     color: @constant;
   }
 
   // all the numbers!
-  &.numeric {
+  &.syntax--numeric {
     color: @numeric;
   }
 
   // can't tell what this does :/
-  &.other.color {
+  &.syntax--other.syntax--color {
     color: @constant;
   }
 
   // can't tell what this does :/
-  &.other.symbol {
+  &.syntax--other.syntax--symbol {
     color: @constant;
   }
 }
 
-.variable {
+.syntax--variable {
 
   // this (js), @varable_name (sass), http://web.com of url(http://web.com), variable of {{variable}} (handlebars)
   color: @variable;
 
   // can't tell what this does
-  &.interpolation {
+  &.syntax--interpolation {
     color: @variable;
   }
 
   // foo & bar of function name(foo, bar)
-  &.parameter.function {
+  &.syntax--parameter.syntax--function {
     color: @function-param;
   }
 }
 
 
 // INVALID TEXT
-.invalid.illegal, .invalid.deprecated {
+.syntax--invalid.syntax--illegal, .syntax--invalid.syntax--deprecated {
   background: none;
   color: @error;
 }
 
-.string {
+.syntax--string {
 
-  .json {
+  .syntax--json {
 
   }
 
@@ -102,109 +102,109 @@
   color: @string;
 
   // REGEX - [\da-z] of /-([\da-z])/gi (js)
-  .constant {
+  .syntax--constant {
     color: @regex;
   }
 
-  &.regexp {
+  &.syntax--regexp {
 
     // ?:input, select, textarea, button of  /^(?:input|select|textarea|button)$/i,
     color: @regex;
 
-    .constant.character.escape,
-    .source.ruby.embedded,
-    .string.regexp.arbitrary-repitition {
+    .syntax--constant.syntax--character.syntax--escape,
+    .syntax--source.syntax--ruby.syntax--embedded,
+    .syntax--string.syntax--regexp.syntax--arbitrary-repitition {
       color: @regex;
     }
 
-    &.group {
+    &.syntax--group {
       color: @regex;
     }
 
-    &.character-class {
+    &.syntax--character-class {
       color: @regex;
     }
 
-    .source.ruby.embedded {
+    .syntax--source.syntax--ruby.syntax--embedded {
       color: @regex;
     }
 
   }
 
   // site.dir in {{site.dir}}
-  .variable {
+  .syntax--variable {
     color: @variable;
   }
 
   // can't tell what this does :/
-  &.other.link {
+  &.syntax--other.syntax--link {
     color: @string;
   }
 }
 
 // String interpolation in Ruby, CoffeeScript, and others
-.source .string {
-  .source,
-  .meta.embedded.line {
+.syntax--source .syntax--string {
+  .syntax--source,
+  .syntax--meta.syntax--embedded.line {
     color: @string;
   }
 
-  .punctuation.section.embedded {
+  .syntax--punctuation.syntax--section.syntax--embedded {
     color: @string;
 
-    .source {
+    .syntax--source {
       color: @string;  // Required for the end of embedded strings in Ruby # 716
     }
   }
 }
 
 // MISC PUNCTUATION
-.punctuation {
+.syntax--punctuation {
 
-  &.terminator {
+  &.syntax--terminator {
     color: @punctuation;
   }
 
-  &.separator {
+  &.syntax--separator {
     color: @punctuation;
   }
 
-  &.definition {
+  &.syntax--definition {
 
     color: @punctuation;
 
-    &.comment {
+    &.syntax--comment {
       color: @comment-punc;
     }
 
     // QUOTES
-    &.string,
-    &.variable,
-    &.array {
+    &.syntax--string,
+    &.syntax--variable,
+    &.syntax--array {
       color: @string;
     }
 
-    &.parameters {
+    &.syntax--parameters {
       color: @code-font-color;
     }
 
-    &.heading,
-    &.identity {
+    &.syntax--heading,
+    &.syntax--identity {
       color: @code-font-color;
     }
 
-    &.bold {
+    &.syntax--bold {
       color: @code-font-color;
       font-weight: bold;
     }
 
-    &.italic {
+    &.syntax--italic {
       color: @code-font-color;
       font-style: italic;
     }
   }
 
-  &.section.embedded {
+  &.syntax--section.syntax--embedded {
     color: @code-font-color;
   }
 
@@ -212,87 +212,87 @@
 
 
 
-.support {
+.syntax--support {
 
   // background of background: none,
   color: @support;
 
   // SUPPORT | module of module.exports
-  &.class {
+  &.syntax--class {
     color: @support;
   }
 
-  &.function  {
+  &.syntax--function  {
     color: @support; // .log of console.log, url of url(http://web.com)
 
     // can't tell what this does :/
-    &.any-method {
+    &.syntax--any-method {
       color: @support;
     }
   }
 
   // {{}} of {{ variable }}
-  &.constant {
+  &.syntax--constant {
     color: @constant;  // none of text-decoration: none;
   }
 
-  &.type.property-name.css {
+  &.syntax--type.syntax--property-name.syntax--css {
     color:  @css-code-font-color;
   }
 }
 
-// .class names in css & scss
-.source .entity.name.tag, .source .entity.other.attribute-name, .meta.tag.inline, .meta.tag.inline .entity {
+// .syntax--class names in css & scss
+.syntax--source .syntax--entity.syntax--name.syntax--tag, .syntax--source .syntax--entity.syntax--other.syntax--attribute-name, .syntax--meta.syntax--tag.syntax--inline, .syntax--meta.syntax--tag.syntax--inline .syntax--entity {
   color: @class;
 }
 
-  &.tag,
-  &.tag .entity {
+  &.syntax--tag,
+  &.syntax--tag .syntax--entity {
     color: @tag-entity;
   }
 
 
-.html {
+.syntax--html {
 
-  .string {
+  .syntax--string {
     color: @code-font-color;
   }
 
 
   // inline elements - <span>
-  .meta {
+  .syntax--meta {
 
 
   }
 
-  .punctuation.definition.tag {
+  .syntax--punctuation.syntax--definition.syntax--tag {
     color: @tag;
   }
 
-  .entity {
+  .syntax--entity {
 
-    &.name.tag {
+    &.syntax--name.syntax--tag {
       text-decoration: done;
 
       // structural elements - <html>
-      &.structure {
+      &.syntax--structure {
         color: @tag;
       }
 
       // block level elements - <div>, <h1>
-      &.block {
+      &.syntax--block {
         color: @tag;
       }
 
       // inline elements - <span>
-      &.script {
+      &.syntax--script {
         // color: @tag;
       }
 
     }
 
-    &.other {
-      &.attribute-name {
+    &.syntax--other {
+      &.syntax--attribute-name {
         color: @element-attr;
       }
     }
@@ -301,144 +301,144 @@
 
 }
 
-// ENTITY | exports of module.exports, <div id= of <div id="#id">, . of .className
-.entity {
+// ENTITY | exports of module.exports, <div id= of <div id="#id">, . of .syntax--className
+.syntax--entity {
 
   color: @entity;
 
   // console of console.log (js)
-  &.name.type {
+  &.syntax--name.syntax--type {
     color: @entity;
     text-decoration: none;
   }
 
-  &.other.inherited-class {
+  &.syntax--other.syntax--inherited-class {
     color: @entity;
   }
 
   // init in init: function(){} (js)
-  &.name.function {
+  &.syntax--name.syntax--function {
     color: @entity;
   }
 
-  &.name.class, &.name.type.class {
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @entity;
   }
 
-  &.name.section {
+  &.syntax--name.syntax--section {
     color: @entity;
   }
 
   // div of <div> (html), body of body{} (css)
-  &.name.tag {
+  &.syntax--name.syntax--tag {
     color: @tag;
     text-decoration: done;
   }
 
 
   // CSS CLASSES
-  &.other.attribute-name {
+  &.syntax--other.syntax--attribute-name {
     color: @element-attr;
 
     // CSS ID's
-    &.id {
+    &.syntax--id {
       color: @id;
     }
   }
 }
 
-.meta {
+.syntax--meta {
 
-  &.link {
+  &.syntax--link {
     color: @meta;
   }
 
-  &.require {
+  &.syntax--require {
     color: @meta;
   }
 
 
-  &.brace {
+  &.syntax--brace {
 
     // curly braces - {}
-    &.curly {
+    &.syntax--curly {
       color: @brackets;
     }
 
     // parenthesis - ()
-    &.round {
+    &.syntax--round {
       color: @code-font-color;
     }
   }
 
-  &.comma {
+  &.syntax--comma {
     color: @punctuation;
   }
 
-  // .css files | commas, ([controls]) of audio:not([controls])
-  &.selector {
+  // .syntax--css files | commas, ([controls]) of audio:not([controls])
+  &.syntax--selector {
     color: @punctuation;
   }
 
-  &.separator {
+  &.syntax--separator {
     background-color: @punctuation;
     color: @punctuation;
   }
 }
 
-.none {
+.syntax--none {
   color: @code-font-color;
 }
 
-.markup {
-  &.bold {
+.syntax--markup {
+  &.syntax--bold {
     color: @markup;
     font-weight: bold;
   }
 
-  &.changed {
+  &.syntax--changed {
     color: @markup;
   }
 
-  &.deleted {
+  &.syntax--deleted {
     color: @markup;
   }
 
-  &.italic {
+  &.syntax--italic {
     color: @markup;
     font-style: italic;
   }
 
-  &.heading .punctuation.definition.heading {
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
     color: @markup;
   }
 
-  &.inserted {
+  &.syntax--inserted {
     color: @markup;
   }
 
-  &.list {
+  &.syntax--list {
     color: @markup;
   }
 
-  &.quote {
+  &.syntax--quote {
     color: @markup;
   }
 
-  &.raw.inline {
+  &.syntax--raw.syntax--inline {
     color: @markup;
   }
 }
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
-  &.heading {
+  &.syntax--heading {
     color: @code-font-color;
   }
 }
 
 
-atom-text-editor[mini], :host(.mini) {
+atom-text-editor[mini],atom-text-editor(.mini) {
  .scroll-view {
     padding-left: 1px;
   }
