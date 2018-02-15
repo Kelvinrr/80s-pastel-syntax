@@ -1,65 +1,66 @@
 @import "colors";
 
 
-.jade {
+.syntax--jade {
 
   color: @code-font-color;
 
-  .comment.jade {
+  .syntax--comment.syntax--jade {
     color: @comment;
   }
 
-  .storage.type.function.jade {
+  .syntax--storage.syntax--type.syntax--function.syntax--jade {
     color: @keyword;
   }
 
-  .meta.control.flow.jade {
+  .syntax--meta.syntax--control.syntax--flow.syntax--jade {
     color: @red;
   }
 
-  .source.script {
-    .meta.brace.round.js, .meta.brace.curly.js {
+  .syntax--source.syntax--script {
+    .syntax--meta.syntax--brace.syntax--round.syntax--js,
+    .syntax--meta.syntax--brace.syntax--curly.syntax--js {
       color: @brackets;
     }
   }
 
-  .entity {
+  .syntax--entity {
 
-    &.name.tag.jade {
+    &.syntax--name.syntax--tag.syntax--jade {
       color: @tag;
     }
 
   }
 
-  .storage.type.import.include.jade {
+  .syntax--storage.syntax--type.syntax--import.syntax--include.syntax--jade {
     color: lighten(@green, 20%);
   }
 
-  .variable.control.import.include.jade {
+  .syntax--variable.syntax--control.syntax--import.syntax--include.syntax--jade {
     color: @green;
   }
 
-  .constant {
+  .syntax--constant {
 
-    &.id {
+    &.syntax--id {
       color: @yellow;
     }
 
-    &.language.js {
+    &.syntax--language.syntax--js {
       color: @purple;
     }
 
   }
 
-  .text.jade {
+  .syntax--text.syntax--jade {
     color: @code-font-color;
   }
 
-  .punctuation.separator.key-value.jade {
+  .syntax--punctuation.syntax--separator.syntax--key-value.syntax--jade {
     color: @tag;
   }
 
-  .string.quoted.jade {
+  .syntax--string.syntax--quoted.syntax--jade {
     color: @code-font-color;
   }
 
